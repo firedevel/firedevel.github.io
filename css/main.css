@@ -1,0 +1,121 @@
+:root {
+    --border: #DDD;
+    --text: #000;
+    --link-bg: #FFF;
+    --link-hover-bg: rgb(230, 230, 230);
+    --bg: #f1f1f1;
+    --link-disable-bg: rgb(242, 242, 242);
+}
+
+@media (prefers-color-scheme: dark) {
+     :root {
+        --border: rgb(31, 31, 31);
+        --text: rgb(255, 255, 255);
+        --text-light: rgb(169, 169, 169);
+        --link-bg: rgb(64, 64, 64);
+        --link-hover-bg: rgb(107, 107, 107);
+        --bg: #2c2c2c;
+        --link-disable-bg: rgb(29, 29, 29);
+    }
+}
+
+body {
+    background-color: var(--bg);
+    margin: 0;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+h1 {
+    position: relative;
+    letter-spacing: -1px;
+    line-height: 60px;
+    font-size: 60px;
+    margin: 5px;
+    font-weight: 100;
+    color: var(--text);
+}
+
+strong {
+    font-weight: bold;
+    margin: 20px 0;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+p {
+    color: var(--text-light);
+    margin: 0;
+    line-height: 1.6;
+}
+
+strong {
+    color: var(--text-light);
+}
+
+.logo-img-2x {
+    display: inline-block;
+}
+
+.logo-img-2x {
+    display: none;
+}
+
+.logo {
+    display: inline-block;
+    margin-top: 35px;
+}
+
+.links {
+    background-color: var(--link-bg);
+    text-align: left;
+    border-radius: 10px;
+    margin: 20px 0;
+}
+
+.links a {
+    font-weight: 500;
+    text-decoration: none;
+    color: var(--text);
+}
+
+.links div:first-child {
+    border-radius: 10px 10px 0 0;
+    border-bottom: none;
+}
+
+.links div:last-child {
+    border-radius: 0 0 10px 10px;
+    border-bottom: solid 1px var(--border);
+}
+
+.links div {
+    border: solid 1px var(--border);
+    padding: 10px 20px;
+    transition: 0.2s;
+    border-bottom: none;
+}
+
+.links div:hover {
+    background-color: var(--link-hover-bg);
+}
+
+.link-disable {
+    background-color: var(--link-disable-bg) !important
+}
+
+.link-disable * {
+    color: rgb(170, 170, 170) !important;
+}
+
+.container {
+    padding: 20px;
+    margin: 50px auto 40px auto;
+    max-width: 600px;
+    text-align: center;
+}
+
+@media screen and (max-width: 480px) {
+    h1 {
+        font-size: 40px;
+        font-weight: 400;
+    }
+}
